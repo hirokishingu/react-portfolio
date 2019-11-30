@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
-import "./hrksng-card.css";
 import hrksngMM from '../../static/images/hrksng-mm.png'
 
 const useStyles = makeStyles({
