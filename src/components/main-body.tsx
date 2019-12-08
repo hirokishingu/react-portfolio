@@ -2,7 +2,9 @@ import React from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { Motion, spring, StaggeredMotion } from 'react-motion';
 import HrkSngSky from './sky/sky';
-import MediaCard from './cards/hrk-sng-card';
+import HrkSngCard from "./cards/hrk-sng-card";
+import PortfolioCard from './cards/port-folio-card';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -16,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     cardMargin: {
-      margin: 50,
+      margin: 20,
     }
   }),
 );
@@ -44,9 +46,14 @@ export default function MainBody() {
           </div>
         }
       </StaggeredMotion>
-      <div className={classes.cardMargin}>
-        <MediaCard></MediaCard>
-      </div>
+      <Grid container spacing={1}>
+        <Grid container item xs={6} spacing={3}>
+          <HrkSngCard></HrkSngCard>
+        </Grid>
+        <Grid container item xs={6} spacing={3}>
+          <PortfolioCard></PortfolioCard>
+        </Grid>
+      </Grid>
       <HrkSngSky></HrkSngSky>
     </React.Fragment>
   );
