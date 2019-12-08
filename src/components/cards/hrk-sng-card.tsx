@@ -11,14 +11,14 @@ import hrksng from './../../static/images/hrksng-mm.png'
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: 345,
+    width: 345,
   },
   media: {
     height: 140,
   },
 });
 
-export default function MediaCard() {
+export default function HrkSngCard() {
   const classes = useStyles();
 
   return (
